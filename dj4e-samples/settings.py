@@ -29,6 +29,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -184,6 +186,7 @@ try:
     from . import github_settings 
     SOCIAL_AUTH_GITHUB_KEY = github_settings.SOCIAL_AUTH_GITHUB_KEY
     SOCIAL_AUTH_GITHUB_SECRET = github_settings.SOCIAL_AUTH_GITHUB_SECRET
+    DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 except:
     print('When you want to use social login, please see dj4e-samples/github_settings-dist.py')
 
